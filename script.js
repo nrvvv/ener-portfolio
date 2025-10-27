@@ -66,3 +66,77 @@ const observer = new IntersectionObserver((entries, observer) => {
 
 hiddenElements.forEach(el => observer.observe(el));
 
+// Starfield with depth effect
+const starCanvas = document.getElementById("starfield");
+const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera(75, starCanvas.clientWidth / starCanvas.clientHeight, 0.1, 1000);
+const renderer = new THREE.WebGLRenderer({ canvas: starCanvas, alpha: true });
+renderer.setSize(starCanvas.clientWidth, starCanvas.clientHeight);
+
+// Create stars with depth and size
+const starCount = 1500;
+const starsGeometry = new THREE.BufferGeometry();
+const starPositions = [];
+const starSizes = [];
+
+for (let i = 0; i < starCount; i++) {
+  const depth = Math.random() * 400 - 200; // z position
+  starPositions.push((Math.random() - 0.5) * 200); // x
+  starPositions.push((Math.random() - 0.5) * 200); // y
+  starPositions.push(depth); // z
+  starSizes.push(Math.random() * 1.2 + 0.3); // size variation
+}
+
+starsGeometry.setAttribute('position', new THREE.Float32BufferAttribute(starPositions, 3));
+starsGeometry.setAttribute('size', new THREE.Float32BufferAttribute(starSizes, 1));
+
+// Material for stars
+const starsMaterial = new THREE.PointsMaterial({
+  color: 0x00bfff,
+  size: 0.5,
+  sizeAttenuation: true, // closer stars appear bigger
+  transparent: true
+});
+
+const starField = new THREE.Points(starsGeometry, starsMaterial);
+scene.add(starField);
+
+camera.position.z = 50;
+
+let mouseX = 0;
+let mouseY = 0;
+document.addEventListener('mousemove', (event) => {
+  mouseX = (event.clientX / window.innerWidth) * 2 - 1;
+  mouseY = -(event.clientY / window.innerHeight) * 2 + 1;
+});
+
+function animateStars() {
+  requestAnimationFrame(animateStars);
+
+  const positions = starField.geometry.attributes.position.array;
+  for (let i = 0; i < positions.length; i += 3) {
+    const z = positions[i + 2];
+    const speed = (200 - Math.abs(z)) * 0.0005; // closer stars move faster
+    positions[i + 2] += speed;
+    if (positions[i + 2] > 200) positions[i + 2] = -200; // wrap around
+  }
+  starField.geometry.attributes.position.needsUpdate = true;
+
+  // Parallax effect with mouse
+  camera.position.x += (mouseX * 50 - camera.position.x) * 0.05;
+  camera.position.y += (mouseY * 25 - camera.position.y) * 0.05;
+  camera.lookAt(scene.position);
+
+  renderer.render(scene, camera);
+}
+
+animateStars();
+
+function resizeStarCanvas() {
+  const rect = starCanvas.getBoundingClientRect();
+  renderer.setSize(rect.width, rect.height);
+  camera.aspect = rect.width / rect.height;
+  camera.updateProjectionMatrix();
+}
+window.addEventListener('resize', resizeStarCanvas);
+resizeStarCanvas();

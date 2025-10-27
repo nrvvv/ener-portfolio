@@ -53,14 +53,23 @@ body {
 
 /* Hero Section */
 .hero {
-  height: 100vh;
-  background: url('test.jpeg') no-repeat center center/cover;
+  position: relative;
+  width: 100%;
+  height: 100vh; /* make hero take full viewport height */
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  text-align: center;
-  position: relative;
+  overflow: hidden; /* keep stars inside */
+}
+
+#starfield {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; /* match hero height */
+  z-index: 0;
 }
 
 .hero::after {
@@ -74,27 +83,25 @@ body {
 .hero-content {
   position: relative;
   z-index: 1;
+  text-align: center;
+  color: #fff;
 }
 
 .hero h1 {
   font-size: 3rem;
   letter-spacing: 3px;
   text-shadow: 0 0 15px #00bfff;
-  animation: glow 2s ease-in-out infinite alternate;
 }
-
 .hero p {
   font-size: 1.2rem;
-  color: #ccc;
   margin-top: 10px;
+  color: #ccc;
 }
-
 .scroll-down {
   margin-top: 30px;
+  font-size: 1rem;
   text-decoration: none;
   color: #00bfff;
-  font-size: 1rem;
-  transition: color 0.3s;
 }
 
 .scroll-down:hover {
@@ -234,7 +241,14 @@ body {
   padding: 100px 20px;
 }
 
-.translation-section h2,
+.translation-section h2 {
+  font-size: 2.5rem;
+  color: #00bfff;
+  text-shadow: 0 0 15px #00bfff;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
 .translation-grid h3,
 .dedication h3,
 .projects h3,
@@ -649,3 +663,52 @@ body {
   opacity: 1;
   transform: translateY(0);
 }
+
+/* Smooth scroll animations */
+.hidden {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hidden {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+a {
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .timeline::before {
+    left: 10px;
+    transform: none;
+  }
+
+  .timeline-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .timeline-item .details {
+    width: 100%;
+  }
+
+  .timeline-item .year {
+    text-align: left;
+    width: auto;
+  }
+}
+

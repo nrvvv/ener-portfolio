@@ -5,6 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ener Erdogan | Portfolio</title>
   <link rel="stylesheet" href="style.css" />
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/three@0.158.0/build/three.min.js"></script>
 </head>
 <body>
   <!-- Navigation -->
@@ -23,6 +29,7 @@
 
   <!-- Home Section -->
   <section id="home" class="hero hidden">
+    <canvas id="starfield"></canvas> <!-- Add this -->
     <div class="hero-content">
       <h1 class="hidden">ENER ERDOGAN</h1>
       <p class="hidden">Translator · YouTuber · Computer Science Student</p>
@@ -236,9 +243,15 @@
       </p>
 
       <div class="contact-links">
-        <a href="Ener_CV.pdf" target="_blank" class="contact-card hidden">📄 My CV</a>
-        <a href="https://www.linkedin.com/in/ener-erdogan-44b0592a6/" target="_blank" class="contact-card hidden">🔗 LinkedIn</a>
-        <a href="mailto:ener.erdogan@email.com" class="contact-card hidden">✉️ Email Me</a>
+        <a href="Ener_CV.pdf" target="_blank" class="contact-card hidden">
+          <i class="fa-solid fa-file-lines"></i> My CV
+        </a>
+        <a href="https://www.linkedin.com/in/ener-erdogan-44b0592a6/" target="_blank" class="contact-card hidden">
+          <i class="fa-brands fa-linkedin"></i> LinkedIn
+        </a>
+        <a href="mailto:ener.erdogan@email.com" class="contact-card hidden">
+          <i class="fa-solid fa-envelope"></i> Email Me
+        </a>
       </div>
     </div>
   </section>
@@ -266,5 +279,17 @@
   </footer>
 
   <script src="script.js"></script>
+  <script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+      }
+    });
+  });
+
+  const hiddenElements = document.querySelectorAll('.hidden');
+  hiddenElements.forEach((el) => observer.observe(el));
+  </script>
 </body>
 </html>
