@@ -140,3 +140,12 @@ function resizeStarCanvas() {
 }
 window.addEventListener('resize', resizeStarCanvas);
 resizeStarCanvas();
+
+// Burger menu toggle
+const burger = document.getElementById("burger");
+const navLinks = document.getElementById("nav-links");
+
+burger.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+  burger.classList.toggle("active");
+});
