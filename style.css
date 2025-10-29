@@ -78,31 +78,43 @@ body {
     top: 0;
     right: -100%;
     height: 100vh;
-    width: 65%;
-    background: rgba(0, 0, 0, 0.9);
+    width: 70%;
+    background: rgba(0, 0, 0, 0.95);
     backdrop-filter: blur(12px);
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 40px;
     transition: right 0.3s ease;
+    text-align: center;
   }
 
-  .nav-links a {
-    font-size: 1.2rem;
-  }
-
-  /* Show menu when active */
   .nav-links.active {
     right: 0;
   }
 
-  /* Change burger icon when active */
-  .burger.active i {
-    content: "\f00d"; /* FontAwesome 'X' icon */
+  .nav-links li {
+    width: 100%;
+  }
+
+  .nav-links a {
+    display: block;
+    width: 100%;
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 10px 0;
+  }
+
+  .nav-links a:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #00bfff;
+  }
+
+  .burger.active i::before {
+    content: "\f00d"; /* font awesome close icon */
   }
 }
-
 /* Hero Section */
 .hero {
   position: relative;
@@ -273,59 +285,69 @@ body {
   line-height: 1.5;
 }
 
-/* ✅ Responsive fix: move line left & stack items */
+/* ✅ Responsive fix: clean layout, no bullet points */
 @media (max-width: 900px) {
   .timeline {
     gap: 40px;
-    padding-left: 50px; /* space for the line */
+    padding-left: 0;
+    position: relative;
   }
 
   .timeline::before {
-    left: 25px;
+    left: 10px;
     transform: none;
+    width: 2px;
+    background: linear-gradient(to bottom, #00bfff, transparent);
   }
 
   .timeline-item {
     flex-direction: column;
     align-items: flex-start;
+    padding-left: 30px; /* keeps nice spacing from the vertical line */
     gap: 15px;
+    position: relative;
   }
+
+  /* Removed the bullet point (::before) completely */
 
   .timeline-item:nth-child(even) {
     flex-direction: column;
   }
 
   .timeline-item .year {
-    font-size: 1.3rem;
-    width: auto;
-    text-align: left;
-    margin-left: 5px;
+    font-size: 1.2rem;
+    margin-left: 0;
+    color: #00bfff;
   }
 
   .timeline-item .details {
     width: 100%;
     padding: 18px;
     background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    border: 1px solid rgba(0, 191, 255, 0.3);
   }
 }
 
 /* 📱 Smaller screens */
 @media (max-width: 600px) {
   .timeline {
-    padding-left: 35px;
+    padding-left: 30px;
   }
 
   .timeline::before {
-    left: 15px;
+    left: 8px;
     width: 1.5px;
+    opacity: 0.8;
   }
 
   .timeline-item .details {
-    padding: 14px 16px;
+    padding: 12px 16px;
   }
 
   .timeline-item .year {
     font-size: 1.1rem;
+    margin-left: 8px;
   }
 }
 
@@ -788,7 +810,7 @@ body {
     width: 100%;
     padding: 10px 0;
     color: #ccc;
-    text-align: left;
+    text-align: center;
   }
 
   .nav-links a:hover {
