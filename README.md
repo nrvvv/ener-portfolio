@@ -1,11 +1,7 @@
-⸻
 
-🌐 Personal Portfolio Website
+### 🌐 Personal Portfolio Website
 
-
-⸻
-
-🧠 About the Project
+# 🧠 About the Project
 
 This website was made with the help of AI.
 
@@ -17,7 +13,7 @@ Designed entirely from scratch, the goal was to make it intuitive — just by sc
 
 ⸻
 
-🏗️ Structure
+# 🏗️ Structure
 
 This website is structured into 5 main parts:
 	•	Home Page: Features an interactive starfield hover effect that creates a dynamic first impression and sets the visual tone for the site.
@@ -28,24 +24,24 @@ This website is structured into 5 main parts:
 
 ⸻
 
-📱 Responsiveness
+# 📱 Responsiveness
 
 The site is fully responsive: layouts, typography, and interactive elements adapt smoothly to different screen sizes so the experience stays polished on desktop, tablet, and mobile.
 Special care was taken for the mobile navigation and timeline so that content remains readable and visually balanced on smaller screens.
 
 ⸻
 
-⚙️ How to Run Locally
+# ⚙️ How to Run Locally
 
 If you’d like to explore or modify this project locally:
 	1.	Clone the repository
 
-git clone https://github.com/your-username/your-repo-name.git
+git clone https://github.com/nrvvv/ener-portfolio.git
 
 
 	2.	Navigate into the folder
 
-cd your-repo-name
+cd ener-portfolio
 
 
 	3.	Open the project
@@ -62,7 +58,7 @@ python3 -m http.server
 
 ⸻
 
-🧰 Technologies Used
+# 🧰 Technologies Used
 	•	HTML5 – for structure
 	•	CSS3 – for layout, animations, and responsive design
 	•	JavaScript (ES6) – for interactivity and animations
@@ -70,17 +66,15 @@ python3 -m http.server
 
 ⸻
 
-📜 License
+# 📜 License
 
 This project is released under the MIT License — you are free to use, modify, and distribute it as long as you credit the original author.
 
 ⸻
 
-✨ Author
+# ✨ Author
 
 Ener Erdogan
 📍 Belgium
 🎬 Content Creator | 🌍 Translator | 💻 Developer
 🔗 LinkedIn • YouTube • Portfolio
-
-⸻
