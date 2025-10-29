@@ -64,7 +64,7 @@ This project is released under the MIT License — you are free to use, modify, 
 
 ## ✨ Author
 
-Ener Erdogan
-📍 Belgium
-🎬 Content Creator | 🌍 Translator | 💻 Developer
-🔗 LinkedIn • YouTube • Portfolio
+**Ener Erdogan**  
+📍 Belgium  
+🎬 Content Creator | 🌍 Translator | 💻 Developer  
+🔗 [LinkedIn](#) • [YouTube](#) • [Portfolio](#)
