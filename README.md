@@ -1,7 +1,7 @@
 
-### 🌐 Personal Portfolio Website
+# 🌐 Personal Portfolio Website
 
-# 🧠 About the Project
+## 🧠 About the Project
 
 This website was made with the help of AI.
 
@@ -11,9 +11,7 @@ I decided to build this website as my first personal project to see what I am ca
 
 Designed entirely from scratch, the goal was to make it intuitive — just by scrolling, you can understand everything about me.
 
-⸻
-
-# 🏗️ Structure
+## 🏗️ Structure
 
 This website is structured into 5 main parts:
 	•	Home Page: Features an interactive starfield hover effect that creates a dynamic first impression and sets the visual tone for the site.
@@ -22,16 +20,14 @@ This website is structured into 5 main parts:
 	•	Coding: Highlights my coding projects, university work, and links to my developer profiles.
 	•	Contact: Easy ways to reach me — CV, LinkedIn, and an email link for commissions or collaborations.
 
-⸻
 
-# 📱 Responsiveness
+## 📱 Responsiveness
 
 The site is fully responsive: layouts, typography, and interactive elements adapt smoothly to different screen sizes so the experience stays polished on desktop, tablet, and mobile.
 Special care was taken for the mobile navigation and timeline so that content remains readable and visually balanced on smaller screens.
 
-⸻
 
-# ⚙️ How to Run Locally
+## ⚙️ How to Run Locally
 
 If you’d like to explore or modify this project locally:
 	1.	Clone the repository
@@ -48,31 +44,25 @@ cd ener-portfolio
 	•	Simply open the index.html file in your browser, or
 	•	Run a local development server (recommended for animations and responsiveness testing):
 
-# Using Python 3
+### Using Python 3
 python3 -m http.server
 
-# Or using VS Code’s Live Server extension
+### Or using VS Code’s Live Server extension
 
 
 	4.	Visit http://localhost:8000 in your browser.
 
-⸻
-
-# 🧰 Technologies Used
+## 🧰 Technologies Used
 	•	HTML5 – for structure
 	•	CSS3 – for layout, animations, and responsive design
 	•	JavaScript (ES6) – for interactivity and animations
 	•	No frameworks or grids – built entirely from scratch
 
-⸻
-
-# 📜 License
+## 📜 License
 
 This project is released under the MIT License — you are free to use, modify, and distribute it as long as you credit the original author.
 
-⸻
-
-# ✨ Author
+## ✨ Author
 
 Ener Erdogan
 📍 Belgium
