@@ -74,7 +74,7 @@ const renderer = new THREE.WebGLRenderer({ canvas: starCanvas, alpha: true });
 renderer.setSize(starCanvas.clientWidth, starCanvas.clientHeight);
 
 // Create stars with depth and size
-const starCount = 1500;
+const starCount = 3000;
 const starsGeometry = new THREE.BufferGeometry();
 const starPositions = [];
 const starSizes = [];

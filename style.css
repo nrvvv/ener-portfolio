@@ -202,8 +202,7 @@ body {
   font-size: 2.5rem;
   margin-bottom: 20px;
   text-align: center;
-  color: #00bfff;
-  text-shadow: 0 0 15px #00bfff;
+  color: #ffffff;
   animation: fadeIn 1.5s ease;
 }
 
@@ -359,13 +358,13 @@ body {
 .trophy img {
   width: 400px;
   border-radius: 15px;
-  box-shadow: 0 0 25px rgba(0, 191, 255, 0.3);
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.3);
   transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
 .trophy img:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 40px rgba(0, 191, 255, 0.6);
+  box-shadow: 0 0 40px rgba(255, 255, 255, 0.6);
 }
 
 .caption {
@@ -389,8 +388,7 @@ body {
 
 .translation-section h2 {
   font-size: 2.5rem;
-  color: #00bfff;
-  text-shadow: 0 0 15px #00bfff;
+  color: #ffffff;
   text-align: center;
   margin-bottom: 20px;
 }
@@ -399,8 +397,7 @@ body {
 .dedication h3,
 .projects h3,
 .testimonials h3 {
-  color: #00bfff;
-  text-shadow: 0 0 15px #00bfff;
+  color: #ffffff;
   text-align: center;
   margin-bottom: 20px;
 }
@@ -525,8 +522,7 @@ body {
 .coding-section h2 {
   font-size: 2.5rem;
   margin-bottom: 20px;
-  color: #00bfff;
-  text-shadow: 0 0 15px #00bfff;
+  color: #ffffff;
 }
 
 .coding-section .intro {
@@ -579,8 +575,7 @@ body {
 .coming-soon {
   margin-top: 50px;
   font-size: 1rem;
-  color: #00bfff;
-  text-shadow: 0 0 10px #00bfff;
+  color: #ffffff;
   font-style: italic;
 }
 
@@ -595,8 +590,7 @@ body {
 .contact-section h2 {
   font-size: 2.5rem;
   margin-bottom: 20px;
-  color: #00bfff;
-  text-shadow: 0 0 15px #00bfff;
+  color: #ffffff;
 }
 
 .contact-section .intro {
