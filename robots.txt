@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://nrvvv.github.io/ener-portfolio/sitemap.xml
